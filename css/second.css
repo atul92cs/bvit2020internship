@@ -1,0 +1,19 @@
+.head-section
+{
+  background-color: #7FFFD4;
+  color: teal;
+}
+.head-section h1
+{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.body-section
+{
+  background-image: url('../images/20191222_022749.jpg');
+  }
+  #second-footer
+  {
+    background-color: blue;
+    color: white;
+  }

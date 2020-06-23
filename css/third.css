@@ -1,0 +1,66 @@
+.head-section
+{
+
+  border:solid black 1.5px;
+}
+.head-section h4
+{
+  color: blue;
+  text-align: center;
+}
+.body-section
+{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.body-section p
+{
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  border-left: blue dotted 2.5px;
+}
+.second-body
+{
+  background: url('../images/20191222_022749.jpg') center center no-repeat;
+  color: white;
+  text-align: center;
+  margin: 5vh 5vw 5vh 5vw;
+  height: 125vh;
+  width: 85vw;
+
+}
+.second-body p
+{
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+}
+.third-body img
+{
+  height:35vh;
+  width:45vw;
+  margin-left: 5vw;
+  margin-bottom: 5vh;
+}
+.third-body p
+{
+  padding-left: 5.5vw;
+  padding-bottom: 2.5vh;
+}
+.navigation-bar ul li
+{
+  list-style-type: none;
+
+}
+.navigation-bar ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation-bar ul li a
+{
+  text-decoration: none;
+}

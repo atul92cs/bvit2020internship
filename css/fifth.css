@@ -1,0 +1,19 @@
+.main-body
+{
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+}
+.first-body h4
+{
+  border: solid 1.5px black;
+  background: blue;
+  color: white;
+  padding: 1.5px 1.5px 1.5px 1.5px;
+
+}
+.first-body p
+{
+  display: inline-block;
+  height: 5vh;
+  width: 4vh;
+}

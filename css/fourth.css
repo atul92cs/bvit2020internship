@@ -1,0 +1,39 @@
+.main-section
+{
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.main-section h2
+{
+  text-align: center;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+}
+.text-section p
+{
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  font-weight: 800;
+}
+.list-section ul
+{
+  list-style-type: none;
+}
+.list-section ul li
+{
+  font-weight: 300;
+  border: solid black 1.5px;
+
+}
+.list-section ul li a
+{
+  margin-right: 4.5vw;
+  margin-left: 4.5vw;
+  margin-top: 12.5vh;
+  margin-bottom: 12.5vh;
+  text-decoration: none;
+}

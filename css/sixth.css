@@ -1,0 +1,20 @@
+.form-group input
+{
+  magin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  border-radius: 3.5px;
+}
+.info-section h4
+{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-family: monospace;
+}
+.info-second p
+{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  font-family: fantasy;
+}
