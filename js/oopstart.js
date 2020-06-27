@@ -50,3 +50,6 @@ let secondheader=document.querySelector('#second-message');
 secondheader.innerText='This is one of the queryselector';
 let secondMessage=document.querySelector('.header-class');
 secondMessage.innerHTML='<i>Text turned italic by class query selector</i>';
+let shows=['supernatural','american gods','strike back','riverdale','titans'];
+let runningShows=shows.splice(2,1);
+console.log(runningShows);

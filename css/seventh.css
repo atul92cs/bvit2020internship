@@ -1,0 +1,7 @@
+ul li
+{
+  border: black solid 1.5px;
+  border-radius: 3.5px;
+  list-style-type: none;
+  padding: 2vh 2vw 2vh 2vw;
+}

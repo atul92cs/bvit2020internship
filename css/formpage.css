@@ -1,0 +1,19 @@
+#register-form
+{
+  margin-top: 5vh;
+  margin-left: 5vh;
+  border: black solid 1.5px;
+  border-radius: 1.5px;
+  padding:1.5vh 1.5vw 1.5vh 1.5vw
+}
+.form-group
+{
+  margin-top: 2vh;
+  width: 35vw;
+  padding:2vh 2vw 2vh 2vw;
+}
+.form-field
+{
+  border-radius: 1.5px;
+  padding: 0.5vh 0.5vw 0.5vw 0.5vh;
+}
