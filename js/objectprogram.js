@@ -78,10 +78,12 @@ for(i=0;i<oddChild.length;i++)
 }
 let body=document.querySelector('body');
 console.log(body);
-body.addEventListener('load',enterElements=()=>{
+enterElements=(e)=>{
+  
   let list=document.querySelector('#element-list');
   let newItem=document.createElement('<li>');
   let newItemText=document.createTextNode('Fourth Element');
   newItem.appendChild(newItemText);
   list.appendChild(newItem);
-});
+}
+body.addEventListener('load',enterElements);

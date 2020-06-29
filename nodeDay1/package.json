@@ -1,0 +1,14 @@
+{
+  "name": "nodeday1",
+  "version": "1.0.0",
+  "description": "Nodejs Day1 Training",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Atul kumar singh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
