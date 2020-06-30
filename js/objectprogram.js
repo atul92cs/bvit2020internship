@@ -79,7 +79,7 @@ for(i=0;i<oddChild.length;i++)
 let body=document.querySelector('body');
 console.log(body);
 enterElements=(e)=>{
-  
+  e.preventDefault();
   let list=document.querySelector('#element-list');
   let newItem=document.createElement('<li>');
   let newItemText=document.createTextNode('Fourth Element');
