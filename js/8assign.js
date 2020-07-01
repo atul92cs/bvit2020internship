@@ -18,7 +18,7 @@ createUser=(e)=>{
   name.value="";
   department.value="";
   email.value="";
-  loadUsers();
+   loadUsers();
 }
 let form=document.querySelector('#register-form');
 form.addEventListener('submit',createUser);
