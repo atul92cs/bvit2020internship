@@ -1,5 +1,4 @@
 const mysql=require('mysql');
-const { response } = require('express');
 const db=mysql.createConnection({
     host:'localhost',
     port:'3306',

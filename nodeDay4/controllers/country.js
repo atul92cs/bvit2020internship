@@ -49,7 +49,7 @@ router.put('/:id',(req,res)=>{
         if(!err)
         {
             res.status(200).json({
-                msg:'coutnry details updated'
+                msg:'country details updated'
             });
         }
         else
@@ -61,7 +61,7 @@ router.put('/:id',(req,res)=>{
         }
     });
 });
-router.delete('/:id',(req,res)=>{
+router.delete('/delete/:id',(req,res)=>{
     let {id}=req.params;
     let sql='delete from country where id=?';
     let body=[id];

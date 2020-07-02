@@ -73,7 +73,7 @@ router.put('/:id',(req,res)=>{
      let {name,company,model,origin}=req.body;
      let body=[name,company,model,origin,id];
      let sql='update cars set name=?,company=?,model=?,origin=? where id=?';
-     db.query(sql,body,(err,resilt)=>{
+     db.query(sql,body,(err,result)=>{
          if(!err)
          {
            res.status(200).json({
@@ -89,7 +89,7 @@ router.put('/:id',(req,res)=>{
          }
      });
 });
-router.delete('/:id',(req,res)=>{
+router.delete('/delete/:id',(req,res)=>{
      let {id}=req.params;
      let sql='delete from cars where id=?';
      let body=[id];

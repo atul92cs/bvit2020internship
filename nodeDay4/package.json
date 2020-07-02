@@ -9,7 +9,10 @@
   "author": "atul kumar singh",
   "license": "ISC",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
     "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "handlebars": "^4.7.6",
     "mysql": "^2.18.1"
   }
 }

@@ -1,7 +1,6 @@
 const express=require('express');
 const router=express.Router();
 const db=require('../config/database');
-const { route } = require('../../Nodeday2/controllers');
 
 router.post('/add',(req,res)=>{
     const {name}=req.body;
@@ -71,7 +70,7 @@ router.put('/:id',(req,res)=>{
         }
     });
 });
-router.delete('/:id',(req,res)=>{
+router.delete('/delete/:id',(req,res)=>{
     let {id}=req.params;
     let sql='delete from company where id=?';
     let body=[id];

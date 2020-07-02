@@ -1,0 +1,58 @@
+<div id="main-body">
+    <span>
+        <form action="/car/add" method="POST" id="car-form">
+         <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Name">
+         </div>
+         <div class="form-group">
+            <input type="text" name="model" class="form-control" placeholder="Model" id="">
+         </div>
+         <div class="form-group">
+           <select name="origin" id="">
+               <option value="0">--SELECT--</option>
+               {{#each countries}}
+               <option value="{{this.id}}">{{this.name}}</option>
+               {{/each}}
+           </select>
+         </div>
+         <div class="form-group">
+           <select name="company" id="">
+               <option value="0">--SELECT--</option>
+               {{#each companies}}
+               <option value="{{this.id}}">{{this.name}}</option>
+               {{/each}}
+           </select>
+         </div>
+         <div class="form-group">
+             <button type="submit" class="btn-primary">Add</button>
+         </div>
+        </form>
+    </span>
+       <span>
+        <table>
+            <thead>
+                <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Model</th>
+                <th>Origin</th>
+                <th>Company</th>
+                <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {{#each cars}}
+                 <tr>
+                     <td>{{this.id}}</td>
+                     <td>{{this.name}}</td>
+                     <td>{{this.model}}</td>
+                     <td>{{this.origin}}</td>
+                     <td>{{this.company}}</td>
+                     <td><a onclick="deleteCar()" type="submit">Delete</a></td>
+                 </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </span>
+</div>
