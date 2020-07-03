@@ -30,4 +30,22 @@ router.get('/',(req,res)=>{
         }
     });
 });
+router.get('/countries',(req,res)=>{
+    res.render('country');
+});
+router.get('/company',(req,res)=>{
+    db.query('select * from company',(err,result)=>{
+        if(!err)
+        {
+            res.render('company',{companies:result,layout:'secondary'});
+        }
+        else
+        {
+             res.status(401).json({
+                 msg:'error occured',
+                 error:err
+             });
+        }
+    });
+});
 module.exports=router;

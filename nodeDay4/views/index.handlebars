@@ -49,7 +49,7 @@
                      <td>{{this.model}}</td>
                      <td>{{this.origin}}</td>
                      <td>{{this.company}}</td>
-                     <td><a onclick="deleteCar()" type="submit">Delete</a></td>
+                     <td><a onclick="deleteCar({{this.id}})" type="submit">Delete</a></td>
                  </tr>
                 {{/each}}
             </tbody>
