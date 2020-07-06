@@ -1,0 +1,23 @@
+<div id="main-body">
+    <div id="message-section">
+        {{#if error_msg}}
+        <span id="error-smg">{{error_msg}}</span>
+        {{/if}}
+        {{#if success_msg}}
+        <span id="success-msg">{{success_msg}}</span>
+        {{/if}}
+    </div>
+    <div id="artist-section">
+        <ul>
+            {{#each artists}}
+              <li>
+                  <h4>{{this.name}}</h4>
+                  <img src="{{this.picture}}" alt="">
+                  <p>{{this.genre}}</p>
+                  <p>{{this.type}}</p>
+              </li>
+            {{/each}}
+        </ul>
+    </div>
+
+</div>

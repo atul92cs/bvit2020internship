@@ -1,0 +1,26 @@
+nav ul 
+{
+    list-style-type: none;
+}
+.navbar-component
+{
+    display: inline-block;
+    margin-right: 5vw;
+    justify-content: center;
+}
+nav
+{
+  padding-left: 30vw; 
+  padding-right: 30vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  background-color: #185bca;
+  
+}
+li a
+{
+    text-decoration:none;
+    color:white;
+    text-transform: capitalize;
+    font-size: x-large;
+}
