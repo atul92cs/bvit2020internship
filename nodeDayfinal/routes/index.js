@@ -44,19 +44,19 @@ router.get('/artist/add',(req,res)=>{
                      }
                      else
                      {
-                        res.render('addartist',{error:error1});
+                        res.render('addartist',{error:error1,layout:'secondary'});
                      }
                  });
               }
               else
               {
-                 res.render('addartist',{err:error});
+                 res.render('addartist',{err:error,layout:'secondary'});
               }
           });
        }
        else
        {
-           res.render('addartist',{error:err});
+           res.render('addartist',{error:err,layout:'secondary'});
        }
    });
 });

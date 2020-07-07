@@ -39,7 +39,7 @@ router.post('/add',upload.single('picture'),(req,res)=>{
         console.log(e);
     });
 });
-router.get('/:id',(req,res)=>{
+router.get('/get/:id',(req,res)=>{
     const {id}=req.params;
     const sql='select * from artist where artist.id=?';
     const body=[id];
@@ -77,7 +77,7 @@ router.put('/update/:id',(req,res)=>{
         }
     });
 });
-router.delete('/:id',(req,res)=>{
+router.delete('/delete/:id',(req,res)=>{
     const {id}=req.params;
     let sql='delete from artist where id=?';
     db.query(sql,[id],(err,result)=>{
