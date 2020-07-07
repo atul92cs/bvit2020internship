@@ -1,0 +1,75 @@
+nav ul 
+{
+    list-style-type: none;
+}
+.navbar-component
+{
+    display: inline-block;
+    margin-right: 5vw;
+    justify-content: center;
+}
+nav
+{
+  padding-left: 30vw; 
+  padding-right: 30vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: #185bca;
+  
+}
+li a
+{
+    text-decoration:none;
+    color:white;
+    text-transform: capitalize;
+    font-size: x-large;
+}
+#artist-form
+{
+    margin-top: 15vh;
+    margin-left: 15vw;
+    margin-bottom: 15vh;
+    margin-right: 15vw;
+}
+#artist-form input
+{
+    height: 5vh;
+    font-size: large;
+}
+#artist-form select
+{
+    height: 5vh;
+    width: 12vw;
+    font-size: large;
+}
+.form-group
+{
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+.btn-primary
+{
+    text-align: center;
+    font-size: large;
+    margin-left: 5vw;
+}
+#form-section
+{
+    display: inline-block;
+}
+#table-section
+{
+    display: inline-block;
+}
+#genre-form
+{
+    margin-left: 5vw;
+    margin-top: 10vh;
+    justify-content: center;
+}
+#genre-form input 
+{
+    height: 5vh;
+    font-size: large;
+    justify-content: center;
+}

@@ -1,0 +1,58 @@
+<div id="main-body">
+   <div id="form-section">
+    <form action="/artist/add" id="artist-form" method="post" enctype="multipart/form-data">
+     <div class="form-group">
+        <input type="text" name="name" placeholder="Name" id="">
+     </div>
+     <div class="form-group">
+        <input type="file" name="picture" placeholder="Picture" id="">
+     </div>
+     <div class="form-group">
+       <select name="genre" id="">
+           <option value="0">--Select--</option>
+           {{#each genres}}
+             <option value="{{this.id}}">{{this.name}}</option>
+           {{/each}}
+       </select>
+     </div>
+     <div class="form-group">
+       <select name="type" id="">
+           <option value="0">--Select--</option>
+          {{#each types}}
+            <option value="{{this.id}}">{{this.name}}</option>
+          {{/each}}
+       </select>
+     </div>
+     <div class="form-group">
+        <button type="submit" class="btn-primary">Add</button>
+     </div>
+</form>
+   </div>
+   <div id="table-section">
+       <table id="artist-form">
+           <thead>
+               <tr>
+                   <th>Id</th>
+                   <th>Name</th>
+                   <th>Picture</th>
+                   <th>Genre</th>
+                   <th>Type</th>
+                   <th colspan="2">Action</th>
+               </tr>
+           </thead>
+           <tbody>
+               {{#each artists}}
+               <tr>
+                   <td>{{this.id}}</td>
+                   <td>{{this.name}}</td>
+                   <td>{{this.picture}}</td>
+                   <td>{{this.genre}}</td>
+                   <td>{{this.type}}</td>
+                   <td><button>Edit</button></td>
+                   <td><button>Delete</button></td>
+               </tr>
+               {{/each}}
+           </tbody>
+       </table>
+   </div>
+</div>

@@ -1,0 +1,33 @@
+<div id="main-body">
+    <div id="form-section">
+       <form id="genre-form" action="/genre/add" method="post">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Name" id="">
+        </div>
+        <div class="form-group">
+            <button class="btn-primary">Add</button>
+        </div>
+       </form>
+    </div>
+    <div id="table-section">
+        <table id="genre-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each genres}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td><button>Update</button></td>
+                    <td><button>Delete</button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

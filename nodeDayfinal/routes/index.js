@@ -40,7 +40,7 @@ router.get('/artist/add',(req,res)=>{
                  db.query(sql3,(error1,result3)=>{
                      if(!error1)
                      {
-                        res.render('addartist',{artist:result1,type:result2,genre:result3,layout:'secondary'});
+                        res.render('addartist',{artists:result1,types:result2,genres:result3,layout:'secondary'});
                      }
                      else
                      {
@@ -147,25 +147,50 @@ router.get('/artist/:id',(req,res)=>{
      db.query(sql,(err,result)=>{
          if(!err)
          {
-            res.render('type',{types:result});
+            res.render('type',{types:result,layout:'secondary'});
  
          }
          else
          {
-              res.render('type',{error:err});
+              res.render('type',{error:err,layout:'secondary'});
          } 
      });
  });
  router.get('/genre',(req,res)=>{
+     let sql='select * from genre';
      db.query(sql,(err,result)=>{
          if(!err)
          {
-             res.render('genre',{gernes:result});
+             res.render('genre',{genres:result,layout:'secondary'});
          }
          else
          {
-               res.render('genre',{error:err});
+               res.render('genre',{error:err,layout:'secondary'});
          }
      });
+ });
+ router.get('/album/add',(req,res)=>{
+    let sql='select * from artist';
+
+    db.query(sql,(err,result)=>{
+        if(!err)
+        {
+           let sql1='select * from album';
+           db.query(sql1,(error,result1)=>{
+               if(!err)
+               {
+                 res.render('addalbum',{artists:result,albums:result1,layout:'secondary'});
+               }
+               else
+               {
+                 res.render('addalbum',{error:error,layout:'secondary'});
+               }
+           });
+        }
+        else
+        {
+             res.render('addalbum',{error:err,layout:'secondary'});
+        }
+    });
  });
  module.exports=router;

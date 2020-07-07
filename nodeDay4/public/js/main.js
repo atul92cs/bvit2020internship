@@ -17,7 +17,6 @@ deleteCar=(id)=>{
    xhr.send(null);
 }
 deleteCountry=(e)=>{
-    console.log(e.target);
     const parent=e.parentElement;
     console.log(parent);
     /*const url="/country/delete/"+id;
@@ -56,11 +55,16 @@ loadCountries=()=>
                let tablecolumn2=document.createElement('td');
                let namedata=document.createTextNode(country.name);
                let tablecolumn3=document.createElement('td');
+               let deleteButton=document.createElement('button');
+               let buttontext=document.createTextNode('Delete');
+               deleteButton.appendChild(buttontext);
+               deleteButton.addEventListener('click',deleteCountry(this));
                tablecolumn1.appendChild(iddata);
                tablecolumn2.appendChild(namedata);
+               tablecolumn3.appendChild(deleteButton);
                tablerow.appendChild(tablecolumn1);
                tablerow.appendChild(tablecolumn2);
-            
+               tablerow.appendChild(tablecolumn3);
                table.appendChild(tablerow);
             
             });
@@ -99,14 +103,4 @@ addCountry=(e)=>{
 }
 countryform.addEventListener('submit',addCountry);
 //deleteButton=document.querySelector('.deleteButton');
-//deleteButton.addEventListener('click',deleteCountry);
-addButtons=()=>{
-    let table=document.querySelector('#table-body');
-    let deleteButton=document.createElement('button');
-    let buttonText=document.createTextNode('delete');
-    deleteButton.appendChild(buttonText);
-    deleteButton.className="deleteButton";
-    deleteButton.addEventListener('click',deleteCountry(this)); 
-    table.appendChild(deleteButton);
-}
-addButtons();
+//deleteButton.addEventListener('click',deleteCountry(this));

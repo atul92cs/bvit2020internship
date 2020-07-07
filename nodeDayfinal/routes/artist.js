@@ -14,25 +14,30 @@ cloud_name:'dkhk4gyey',
 api_key:'459656749761335',
 api_secret:'AS_y6ZzH7FAjeoIxF1IjtMFKzQg'
 });
-router.post('/add',upload.single('picture'),async(req,res)=>{
-    const {name,type,genre}=req.body;
-    const {picture}=req.file.path;
-    let uploadedpicture=await cloudinary.v2.uploader.upload(picture);
-    let sql='insert into artist set ?';
-    let body={name:name,type:type,genre:genre,picture:uploadedpicture};
-    db.query(sql,body,(err,result)=>{
-       if(err)
-       {
-        req.flash('error',err)
-          res.redirect('/');
-       }
-       else
-       {
-         req,flash('success_msg','Artist created')
-          res.redirect('/');
-       }
+router.post('/add',upload.single('picture'),(req,res)=>{
+    let {name,type,genre}=req.body;
+    cloudinary.v2.uploader.upload(req.file.path).
+    then((image)=>{
+        let sql='insert into artist set ?';
+        let body={name:name,type:type,genre:genre,picture:image.secure_url};
+        db.query(sql,body,(err,result)=>{
+            if(err)
+            {
+             req.flash('error',err)
+               res.redirect('/');
+            }
+            else
+            {
+              req.flash('success_msg','Artist created')
+               res.redirect('/');
+            }
+         });
+        
+    }).catch(e=>{
+        //req.flash('error',e);
+        //res.redirect('/');
+        console.log(e);
     });
-
 });
 router.get('/:id',(req,res)=>{
     const {id}=req.params;
