@@ -28,8 +28,37 @@
      </div>
 </form>
    </div>
+   <div id="edit-artist">
+     <form id="updateArtist">
+       <div class="form-group">
+         <input type="text" name="id" id="editid" readonly>
+       </div>
+       <div class="form-group">
+         <input type="text" name="editname" id="editname">
+       </div>
+       <div class="form-group">
+         <select name="editgenre" id="editgenre">
+           <option value="0">--Select--</option>
+           {{#each genres}}
+           <option value="{{this.id}}">{{this.name}}</option>
+           {{/each}}
+         </select>
+       </div>
+       <div class="form-group">
+          <select name="edittype" id="edittype">
+            <option value="0">--Select--</option>
+            {{#each types}}
+            <option value="{{this.id}}">{{this.name}}</option>
+            {{/each}}
+          </select>
+       </div>
+       <div class="form-group">
+         <button class="btn-primary">Update</button>
+       </div>
+     </form>
+   </div>
    <div id="table-section">
-       <table id="artist-form">
+       <table id="artist-table">
            <thead>
                <tr>
                    <th>Id</th>
@@ -45,10 +74,10 @@
                <tr>
                    <td>{{this.id}}</td>
                    <td>{{this.name}}</td>
-                   <td>{{this.picture}}</td>
+                   <td><img src="{{this.picture}}" alt="{{this.name}}"></td>
                    <td>{{this.genre}}</td>
                    <td>{{this.type}}</td>
-                   <td><button>Edit</button></td>
+                   <td><button onclick="getArtist({{this.id}})">Edit</button></td>
                    <td><button onclick="deleteArtist({{this.id}})">Delete</button></td>
                </tr>
                {{/each}}

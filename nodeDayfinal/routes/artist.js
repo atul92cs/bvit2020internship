@@ -34,9 +34,9 @@ router.post('/add',upload.single('picture'),(req,res)=>{
          });
         
     }).catch(e=>{
-        //req.flash('error',e);
-        //res.redirect('/');
-        console.log(e);
+        req.flash('error',e);
+        res.redirect('/');
+        //console.log(e);
     });
 });
 router.get('/get/:id',(req,res)=>{
@@ -53,9 +53,9 @@ router.get('/get/:id',(req,res)=>{
         }
         else
         {
-             res.status(200).json({
-                 artist:result
-             });
+           res.status(200).json({
+               artist:result[0]
+           });
         }
     });
 });
